@@ -22,6 +22,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.0/flowbite.min.js"></script>
 
+    <script>
+        function toggleReadMore() {
+            const moreText = document.getElementById("moreText");
+            const btnText = document.getElementById("readMoreBtn");
+    
+            if (moreText.classList.contains("hidden")) {
+                moreText.classList.remove("hidden");
+                btnText.textContent = "Read Less";
+            } else {
+                moreText.classList.add("hidden");
+                btnText.textContent = "Read More";
+            }
+        }
+    </script>
+
 
 </head>
 
@@ -917,17 +932,26 @@
                             Temple</p>
                     </div>
                     <div class="text-gray-700 text-sm sm:text-base leading-relaxed">
-                        <p>
+                        <!-- <p>
                             We are thrilled to share that the digitalization of Kumaranallur Devi Temple, Kottayam has
-                            been successfully completed! This transformative initiative was made possible through the
-                            collaborative efforts of Arppan, Bochdale Solutions, and South Indian Bank, with the
-                            invaluable support of the temple management.
-                        </p>
-                        <p class="mt-2">
-                            This project stands as a testament to how digital innovation is revolutionizing temple
-                            management—enhancing devotee experiences, streamlining operations, and preserving traditions
-                            for future generations.
-                        </p>
+                            been successfully completed!
+                        </p> -->
+                        <div id="moreText" class="hidden">
+                            <p> We are thrilled to share that the digitalization of Kumaranallur Devi Temple, Kottayam has
+                                been successfully completed!.This transformative initiative was made possible through the collaborative efforts of
+                                Arppan,
+                                Bochdale Solutions, and South Indian Bank, with the invaluable support of the temple
+                                management.
+                            </p>
+                            <p class="mt-2">
+                                This project stands as a testament to how digital innovation is revolutionizing temple
+                                management—enhancing devotee experiences, streamlining operations, and preserving
+                                traditions
+                                for future generations.
+                            </p>
+                        </div>
+                        <button id="readMoreBtn" onclick="toggleReadMore()" class="text-blue-600 mt-2 font-bold">Read
+                            More</button>
                     </div>
                 </div>
             </div>
@@ -935,7 +959,7 @@
     </section>
 
 
-  
+
 
 
 
