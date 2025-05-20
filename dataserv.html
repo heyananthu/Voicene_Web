@@ -1,941 +1,924 @@
 <!DOCTYPE html>
 <html class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Services</title>
-    <link rel="icon" type="image/x-icon" href="img/fav.png" />
-    <link href="custom.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <link href="./output.css" rel="stylesheet" />
-    <script src="preline.js"></script>
-  </head>
-  <body>
-    <header class="sticky inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
-      <nav
-        class="relative max-w-7xl w-full bg-white rounded-[28px] py-3 text-md md:flex md:items-center md:justify-between md:py-0 mx-2 lg:mx-auto"
-        aria-label="Global">
-        <div class="flex items-center justify-between">
-          <!-- Logo -->
-          <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/"
-            aria-label="Preline">
-            <img src="img/Logo_Balck.png" alt="Logo_Balck" class="w-56 my-4" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Voicene offers data mining, digitization, annotation, and entry services to boost business efficiency.">
+  <meta name="keywords"
+    content="data services, data entry, data annotation, data digitization, data conversion, data processing, Voicene data services">
+  <meta name="author" content="Voicene Technologies">
+  <title>Full-Stack Data Services | Voicene</title>
+  <link rel="icon" type="image/x-icon" href="img/fav.png" />
+  <link href="custom.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="./output.css" rel="stylesheet" />
+  <script src="preline.js"></script>
+</head>
+
+<body>
+  <header class="sticky inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
+    <nav
+      class="relative max-w-7xl w-full bg-white rounded-[28px] py-3 text-md md:flex md:items-center md:justify-between md:py-0 mx-2 lg:mx-auto"
+      aria-label="Global">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/"
+          aria-label="Preline">
+          <img src="img/Logo_Balck.png" alt="Logo_Balck" class="w-56 my-4" />
+        </a>
+        <!-- End Logo -->
+
+        <div class="md:hidden">
+          <button type="button"
+            class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full bg-gray-800 text-gray-700 disabled:opacity-50 disabled:pointer-events-none"
+            data-hs-collapse="#navbar-collapse" aria-controls="navbar-collapse" aria-label="Toggle navigation">
+            <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Collapse -->
+      <div id="navbar-collapse"
+        class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
+          <a class="py-3 ps-px sm:px-3 md:py-4 text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300"
+            href="index.html" aria-current="page">Home
           </a>
-          <!-- End Logo -->
-  
-          <div class="md:hidden">
+          <a class="py-3 ps-px sm:px-3 md:py-4 text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300"
+            href="about.html">About
+          </a>
+
+
+
+          <!-- services-->
+
+
+          <div
+            class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
             <button type="button"
-              class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full bg-gray-800 text-gray-700 disabled:opacity-50 disabled:pointer-events-none"
-              data-hs-collapse="#navbar-collapse" aria-controls="navbar-collapse" aria-label="Toggle navigation">
-              <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              Services
+              <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
-                <line x1="3" x2="21" y1="6" y2="6" />
-                <line x1="3" x2="21" y1="12" y2="12" />
-                <line x1="3" x2="21" y1="18" y2="18" />
-              </svg>
-              <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 6 6 18" />
-                <path d="m6 6 12 12" />
+                <path d="m6 9 6 6 6-6" />
               </svg>
             </button>
-          </div>
-        </div>
-  
-        <!-- Collapse -->
-        <div id="navbar-collapse"
-          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
-            <a class="py-3 ps-px sm:px-3 md:py-4 text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300"
-              href="index.html" aria-current="page">Home
-            </a>
-            <a class="py-3 ps-px sm:px-3 md:py-4 text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300"
-              href="about.html">About
-            </a>
-  
-  
-  
-            <!-- services-->
-  
-  
+
             <div
-              class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
-              <button type="button"
-                class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                Services
-                <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-  
+              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-62 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
               <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-62 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Itservices.html">
+                    IT Services
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
                 <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Itservices.html">
-                      IT Services
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/webdevelopmentservice.html">
-                      Web Development Service
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/customsoftwaredevelopmentservice.html">
-                      Custom Software Development Service
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/softwareproductdevelopmentservice.html">
-                      Software Product Development Service
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/mobileappdevelopmentservice.html">
-                      Mobile app development Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/softwaretestingservice.html">
-                      Software Testing Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/uiux.html">
-                      UI/UX
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/aiml.html">
-                      AI & ML
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/iot.html">
-                      IOT
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/blockchain.html">
-                      Blockchain
-                    </a>
-  
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./itservices/dataanaltics.html">
-                      Data Analytics
-                    </a>
-                  </div>
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/webdevelopmentservice.html">
+                    Web Development Service
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/customsoftwaredevelopmentservice.html">
+                    Custom Software Development Service
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/softwareproductdevelopmentservice.html">
+                    Software Product Development Service
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/mobileappdevelopmentservice.html">
+                    Mobile app development Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/softwaretestingservice.html">
+                    Software Testing Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/uiux.html">
+                    UI/UX
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/aiml.html">
+                    AI & ML
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/iot.html">
+                    IOT
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/blockchain.html">
+                    Blockchain
+                  </a>
+
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./itservices/dataanaltics.html">
+                    Data Analytics
+                  </a>
                 </div>
-  
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="staffaugmentation.html">
-                  Staff Augmentation
-                </a>
-                <!-- 
+              </div>
+
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="staffaugmentation.html">
+                Staff Augmentation
+              </a>
+              <!-- 
                 <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
                   href="dataserv.html">
                   Data Services
                 </a> -->
-                <!-- 
+              <!-- 
                 <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
                   href="seotech.html">
                   SEO & Digital Marketing
                 </a> -->
-  
-  
-  
-  
+
+
+
+
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./dataserv.html">
+                    Data Services
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
                 <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./dataserv.html">
-                      Data Services
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Data-Entry-Services.html">
-                      Data Entry Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Data-Annotation.html">
-                      Data Annotation
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Image-Annotation-Services.html">
-                      Image Annotation Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/E-Book-Conversion-Sertvices.html">
-                      Ebook Conversion Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Data-Processing-Services.html">
-                      Data Processing Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Data-conversion-services.html">
-                      Data Conversion Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/OCR-SERVICES.html">
-                      OCR Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Data-Extraction-Services.html">
-                      Data Extraction Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Data-Digitization-Services.html">
-                      Document Digigtization Services
-                    </a>
-  
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Dataservice/Data-Mining.html">
-                      Data Mining
-                    </a>
-                  </div>
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Data-Entry-Services.html">
+                    Data Entry Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Data-Annotation.html">
+                    Data Annotation
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Image-Annotation-Services.html">
+                    Image Annotation Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/E-Book-Conversion-Sertvices.html">
+                    Ebook Conversion Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Data-Processing-Services.html">
+                    Data Processing Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Data-conversion-services.html">
+                    Data Conversion Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/OCR-SERVICES.html">
+                    OCR Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Data-Extraction-Services.html">
+                    Data Extraction Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Data-Digitization-Services.html">
+                    Document Digigtization Services
+                  </a>
+
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Dataservice/Data-Mining.html">
+                    Data Mining
+                  </a>
                 </div>
-  
-                <!--               
+              </div>
+
+              <!--               
                 <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
                   href="callcent.html">
                   Call Center Services
                 </a> -->
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./callcent.html">
+                    Call Center Services
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
                 <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./callcent.html">
-                      Call Center Services
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/Inbound-Call-Center-Services.html">
-                      Inbound Call Center Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/Lead-Generation-Services.html">
-                      Lead Generation Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/Outbound-Sales-Services.html">
-                      Outbound Sales Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/Appointment-Setting.html">
-                      Appointment Settings
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/Virtual-Assistant-Services.html">
-                      Virtual Assistant Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/Technical-Support.html">
-                      Technical Support
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/E-mail-Support-Services.html">
-                      Email Support Services
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Call Center Services/Live-Chat-Support.html">
-                      Live Chat Support Services
-                    </a>
-                  </div>
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/Inbound-Call-Center-Services.html">
+                    Inbound Call Center Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/Lead-Generation-Services.html">
+                    Lead Generation Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/Outbound-Sales-Services.html">
+                    Outbound Sales Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/Appointment-Setting.html">
+                    Appointment Settings
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/Virtual-Assistant-Services.html">
+                    Virtual Assistant Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/Technical-Support.html">
+                    Technical Support
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/E-mail-Support-Services.html">
+                    Email Support Services
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Call Center Services/Live-Chat-Support.html">
+                    Live Chat Support Services
+                  </a>
                 </div>
-  
-  
+              </div>
+
+
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./revenueCycleManagementPage.html">
+                    Revenue Cycle Management
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
                 <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./revenueCycleManagementPage.html">
-                      Revenue Cycle Management
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./RevenueCyclemanagement/Medical-Coding.html">
-                      Medical Coding
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./RevenueCyclemanagement/Medicalbilling.html">
-                      Medical Billing
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./RevenueCyclemanagement/Account-Receivable.html">
-                      Account Receivables -Follow Up
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./RevenueCyclemanagement/Virtual-Physician.html">
-                      Virtual Physician Assist
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./RevenueCyclemanagement/Payment-posting.html">
-                      Payment posting
-                    </a>
-                  </div>
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./RevenueCyclemanagement/Medical-Coding.html">
+                    Medical Coding
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./RevenueCyclemanagement/Medicalbilling.html">
+                    Medical Billing
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./RevenueCyclemanagement/Account-Receivable.html">
+                    Account Receivables -Follow Up
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./RevenueCyclemanagement/Virtual-Physician.html">
+                    Virtual Physician Assist
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./RevenueCyclemanagement/Payment-posting.html">
+                    Payment posting
+                  </a>
                 </div>
+              </div>
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./EnterpriseResourcePlanning.html">
+                    Enterprise Resource Planning
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
                 <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./EnterpriseResourcePlanning.html">
-                      Enterprise Resource Planning
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./ERP/Oodo.html">
-                      ODOO
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./ERP/Sap.html">
-                      SAP
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./ERP/Microsoft-Dynamics-365-ERP.html">
-                      Microsoft Dynamics 365
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./ERP/Zoho.html">
-                      Zoho
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./ERP/Freshworks.html">
-                      Freshwork
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./ERP/Salesforce.html">
-                      Salesforce
-                    </a>
-                  </div>
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./ERP/Oodo.html">
+                    ODOO
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./ERP/Sap.html">
+                    SAP
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./ERP/Microsoft-Dynamics-365-ERP.html">
+                    Microsoft Dynamics 365
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./ERP/Zoho.html">
+                    Zoho
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./ERP/Freshworks.html">
+                    Freshwork
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./ERP/Salesforce.html">
+                    Salesforce
+                  </a>
                 </div>
-  
-  
+              </div>
+
+
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./ItInfrastructureManagement.html">
+                    IT Infrastructure Management Services
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
                 <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./ItInfrastructureManagement.html">
-                      IT Infrastructure Management Services
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./IT and Infrastructure/AWS.html">
-                      AWS
-                    </a>
-                    <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./IT and Infrastructure/AWS.html">
+                    AWS
+                  </a>
+                  <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
                       href="#">
                       SAP
                     </a> -->
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./IT and Infrastructure/AZURE.html">
-                      Azure
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./IT and Infrastructure/Cloud-Services.html">
-                      Cloud Services
-                    </a>
-                  </div>
-                </div>
-  
-                <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./seotech.html">
-                      SEO & Digital Marketing
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Seo&digitalmarketing/searchenginoptimization.html">
-                      Search Engine Optimisation
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Seo&digitalmarketing/Social-Media-Marketing.html">
-                      Social Media Marketing
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Seo&digitalmarketing/Performance-Marketing.html">
-                      Performance Marketing
-                    </a>
-                  </div>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./IT and Infrastructure/AZURE.html">
+                    Azure
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./IT and Infrastructure/Cloud-Services.html">
+                    Cloud Services
+                  </a>
                 </div>
               </div>
-            </div>
-  
-  
-            <a class="py-3 ps-px sm:px-3 md:py-4 text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300"
-              href="./Products/product.html">Products
-            </a>
-  
-            <!-- technologies-->
-  
-            <div
-              class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
-              <button type="button"
-                class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                Technologies
-                <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-  
+
               <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-60 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./seotech.html">
+                    SEO & Digital Marketing
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
                 <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center gap-x-3.5 py-2 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies/cloud.html">
-                      Cloud Technologies
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies-Sub/Cloud/Aws.html">
-                      AWS
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies-Sub/Cloud/Azure.html">
-                      Azure
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies-Sub/Cloud/Googlecloud.html">
-                      Google Cloud
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center gap-x-3.5 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies/microsoft.html">
-                      Microsoft Technologies
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies-Sub/microsoft/C.html">
-                      C#
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies-Sub/microsoft/ASP DOTNET.html">
-                      ASP DOTNET
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies-Sub/microsoft/SQL.html">
-                      SQL
-                    </a>
-                  </div>
-                </div>
-  
-                <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies/javascript.html">
-                      Javascript Technologies
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <div
-                      class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                      <button type="button"
-                        class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                        <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/frondend/frondend.html">
-                          Frontend
-                        </a>
-                        <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                          height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                          stroke-linecap="round" stroke-linejoin="round">
-                          <path d="m6 9 6 6 6-6" />
-                        </svg>
-                      </button>
-  
-                      <div
-                        class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/frondend/Angular.html">
-                          Angular
-                        </a>
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/frondend/Reactjs.html">
-                          React Js
-                        </a>
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/frondend/Vue.html">
-                          Vue.js
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                      <button type="button"
-                        class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                        <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/backend/backend.html">
-                          Backend
-                        </a>
-                        <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                          height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                          stroke-linecap="round" stroke-linejoin="round">
-                          <path d="m6 9 6 6 6-6" />
-                        </svg>
-                      </button>
-  
-                      <div
-                        class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/backend/Nodejs.html">
-                          Node JS
-                        </a>
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/backend/Nextjs.html">
-                          Next Js
-                        </a>
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Technologies-Sub/javaScript/backend/Express.html">
-                          Express JS
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies/mobileapp-development.html">
-                      Mobile app Development
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <div
-                      class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                      <button type="button"
-                        class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                        <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Mobile App Development/SWFT.html">
-                          SWFT
-                        </a>
-                      </button>
-                    </div>
-                    <div
-                      class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                      <button type="button"
-                        class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                        <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Mobile App Development/React-Native.html">
-                          React Native
-                        </a>
-                      </button>
-                    </div>
-                    <div
-                      class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                      <button type="button"
-                        class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                        <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Mobile App Development/Flutter.html">
-                          Flutter
-                        </a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Technologies/devops.html">
-                  DevOps
-                </a>
-                <div
-                  class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                  <button type="button"
-                    class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                    <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                      href="./Technologies/test-automation.html">
-                      Test Automation
-                    </a>
-                    <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </button>
-  
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
-                    <div
-                      class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                      <button type="button"
-                        class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                        <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Test Automation/Selenium.html">
-                          Selenium
-                        </a>
-                      </button>
-                    </div>
-                    <div
-                      class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
-                      <button type="button"
-                        class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
-                        <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                          href="./Test Automation/Jmeter.html">
-                          Jmeter
-                        </a>
-                      </button>
-                    </div>
-                  </div>
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Seo&digitalmarketing/searchenginoptimization.html">
+                    Search Engine Optimisation
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Seo&digitalmarketing/Social-Media-Marketing.html">
+                    Social Media Marketing
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Seo&digitalmarketing/Performance-Marketing.html">
+                    Performance Marketing
+                  </a>
                 </div>
               </div>
             </div>
-            <!-- Industries-->
-  
+          </div>
+
+
+          <a class="py-3 ps-px sm:px-3 md:py-4 text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300"
+            href="./Products/product.html">Products
+          </a>
+
+          <!-- technologies-->
+
+          <div
+            class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
+            <button type="button"
+              class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              Technologies
+              <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
             <div
-              class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
-              <button type="button"
-                class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                Industries
-                <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-  
+              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-60 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
               <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-60 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Retail&Ecommerce.html">
-                  Retail & Ecommerce
-                </a>
-  
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Social-Media.html">
-                  Social Media
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Hospitality.html">
-                  Hospitality
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Human-Resources&Recruitment.html">
-                  Human Resources & Recruitment
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Manufacturing.html">
-                  Manufacturing
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Transportation.html">
-                  Transportation
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Warehouse.html">
-                  Warehouse
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Construction&Facility.html">
-                  Construction & Facility Management
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Industries/Healthcare.html">
-                  Healthcare
-                </a>
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center gap-x-3.5 py-2 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies/cloud.html">
+                    Cloud Technologies
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies-Sub/Cloud/Aws.html">
+                    AWS
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies-Sub/Cloud/Azure.html">
+                    Azure
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies-Sub/Cloud/Googlecloud.html">
+                    Google Cloud
+                  </a>
+                </div>
+              </div>
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center gap-x-3.5 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies/microsoft.html">
+                    Microsoft Technologies
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies-Sub/microsoft/C.html">
+                    C#
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies-Sub/microsoft/ASP DOTNET.html">
+                    ASP DOTNET
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies-Sub/microsoft/SQL.html">
+                    SQL
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies/javascript.html">
+                    Javascript Technologies
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <div
+                    class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                    <button type="button"
+                      class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                      <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/frondend/frondend.html">
+                        Frontend
+                      </a>
+                      <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </button>
+
+                    <div
+                      class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/frondend/Angular.html">
+                        Angular
+                      </a>
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/frondend/Reactjs.html">
+                        React Js
+                      </a>
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/frondend/Vue.html">
+                        Vue.js
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                    <button type="button"
+                      class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                      <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/backend/backend.html">
+                        Backend
+                      </a>
+                      <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </button>
+
+                    <div
+                      class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/backend/Nodejs.html">
+                        Node JS
+                      </a>
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/backend/Nextjs.html">
+                        Next Js
+                      </a>
+                      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Technologies-Sub/javaScript/backend/Express.html">
+                        Express JS
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies/mobileapp-development.html">
+                    Mobile app Development
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <div
+                    class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                    <button type="button"
+                      class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                      <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Mobile App Development/SWFT.html">
+                        SWFT
+                      </a>
+                    </button>
+                  </div>
+                  <div
+                    class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                    <button type="button"
+                      class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                      <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Mobile App Development/React-Native.html">
+                        React Native
+                      </a>
+                    </button>
+                  </div>
+                  <div
+                    class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                    <button type="button"
+                      class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                      <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Mobile App Development/Flutter.html">
+                        Flutter
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Technologies/devops.html">
+                DevOps
+              </a>
+              <div
+                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                <button type="button"
+                  class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                  <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                    href="./Technologies/test-automation.html">
+                    Test Automation
+                  </a>
+                  <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-64 hidden z-10 md:mt-2 md:shadow-md rounded-lg p-2 before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full bg-main">
+                  <div
+                    class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                    <button type="button"
+                      class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                      <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Test Automation/Selenium.html">
+                        Selenium
+                      </a>
+                    </button>
+                  </div>
+                  <div
+                    class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] relative">
+                    <button type="button"
+                      class="w-full flex justify-between items-center py-2 px-3 text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300">
+                      <a class="flex items-center rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                        href="./Test Automation/Jmeter.html">
+                        Jmeter
+                      </a>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-  
-            <!-- Resources-->
-  
+          </div>
+          <!-- Industries-->
+
+          <div
+            class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
+            <button type="button"
+              class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              Industries
+              <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
             <div
-              class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
-              <button type="button"
-                class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                Resources
-                <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-  
-              <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="blogs.html">
-                  Blogs
-                </a>
-  
-                <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="casestudies.html">
-                  Case Studies
-                </a> -->
-  
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="corporateprofile.html">
-                  Corporate Profile
-                </a>
-  
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./News/News.html">
-                  News
-                </a>
-  
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="./Gallery/Gallery.html">
-                  Gallery
-                </a>
-  
-  
-                <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="testimonials.html">
-                  Testimonials
-                </a> -->
-  
-              </div>
-            </div>
-  
-            <!-- Careers-->
-            <div
-              class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
-              <button type="button"
-                class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                Careers
-                <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-  
-              <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="openings.html">
-                  Openings
-                </a>
-  
-                <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
-                  href="companypictures.html">
-                  Company Pictures
-                </a> -->
-  
-              </div>
-            </div>
-  
-            <div>
-              <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-main font-medium text-white rounded-full focus:outline-none"
-                href="contactus.html">
-                Contact us
+              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-60 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Retail&Ecommerce.html">
+                Retail & Ecommerce
+              </a>
+
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Social-Media.html">
+                Social Media
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Hospitality.html">
+                Hospitality
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Human-Resources&Recruitment.html">
+                Human Resources & Recruitment
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Manufacturing.html">
+                Manufacturing
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Transportation.html">
+                Transportation
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Warehouse.html">
+                Warehouse
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Construction&Facility.html">
+                Construction & Facility Management
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Industries/Healthcare.html">
+                Healthcare
               </a>
             </div>
           </div>
-        </div>
-        <!-- End Collapse -->
-      </nav>
-    </header>
-    <!-- ========== END HEADER ========== -->
-    <section>
-      <div class="relative">
-        <img src="img/dataserv.jpg" class="absolute inset-0 object-cover w-full h-full" alt="" />
-        <div class="relative bg-gray-900 bg-opacity-75">
+
+          <!-- Resources-->
+
           <div
-            class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-          >
-            <div class="flex flex-col items-center justify-between xl:flex-row">
-              <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-                <h2
-                  class="max-w-lg mb-6   uppercase text-3xl font-extrabold       text-white    "
-                >
+            class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
+            <button type="button"
+              class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              Resources
+              <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
+            <div
+              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="blogs.html">
+                Blogs
+              </a>
+
+              <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                  href="casestudies.html">
+                  Case Studies
+                </a> -->
+
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="corporateprofile.html">
+                Corporate Profile
+              </a>
+
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./News/News.html">
+                News
+              </a>
+
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="./Gallery/Gallery.html">
+                Gallery
+              </a>
+
+
+              <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                  href="testimonials.html">
+                  Testimonials
+                </a> -->
+
+            </div>
+          </div>
+
+          <!-- Careers-->
+          <div
+            class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--trigger:hover] [--adaptive:none] py-3 ps-px sm:px-3 md:py-4">
+            <button type="button"
+              class="flex items-center w-full text-gray-600 hover:text-gray-300 focus:outline-none focus:text-gray-300">
+              Careers
+              <svg class="flex-shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
+            <div
+              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-main md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                href="openings.html">
+                Openings
+              </a>
+
+              <!-- <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-white hover:text-gray-300 font-medium focus:outline-none focus:text-gray-300"
+                  href="companypictures.html">
+                  Company Pictures
+                </a> -->
+
+            </div>
+          </div>
+
+          <div>
+            <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-main font-medium text-white rounded-full focus:outline-none"
+              href="contactus.html">
+              Contact us
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End Collapse -->
+    </nav>
+  </header>
+  <!-- ========== END HEADER ========== -->
+  <section>
+    <div class="relative">
+      <img src="img/dataserv.jpg" class="absolute inset-0 object-cover w-full h-full" alt="" />
+      <div class="relative bg-gray-900 bg-opacity-75">
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div class="flex flex-col items-center justify-between xl:flex-row">
+            <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+              <h2 class="max-w-lg mb-6   uppercase text-3xl font-extrabold       text-white    ">
                 Data Services
-                </h2>
-                <h6
-                  class="max-w-lg mb-6  text-white    "
-                >
+              </h2>
+              <h6 class="max-w-lg mb-6  text-white    ">
                 Transform Your Business with Powerful Data Solutions
-                </h6>
-                <p class="max-w-xl mb-4 text-base text-gray-200">
-                    At Voicene Technologies, we understand that data is the foundation of modern business. In today’s digital world, the ability to collect, process, and analyze data efficiently can be the key to staying ahead of the competition. That’s why we offer comprehensive data services tailored to your unique business needs, ensuring that you not only gather the right data but also leverage it to drive intelligent decisions and fuel growth.
-                </p>
-              </div>
+              </h6>
+              <p class="max-w-xl mb-4 text-base text-gray-200">
+                At Voicene Technologies, we understand that data is the foundation of modern business. In today’s
+                digital world, the ability to collect, process, and analyze data efficiently can be the key to staying
+                ahead of the competition. That’s why we offer comprehensive data services tailored to your unique
+                business needs, ensuring that you not only gather the right data but also leverage it to drive
+                intelligent decisions and fuel growth.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="px-4 py-4 mx-auto w-full bg-gray-100">
-      <nav aria-label="Breadcrumb " class="w-full p-4">
-        <ol class="flex items-center gap-1 text-sm text-gray-600 mx-auto">
-          <li>
-            <a href="index.html" class="block transition hover:text-gray-700">
-              <span class="sr-only"> Home </span>
+    </div>
+  </section>
+  <section class="px-4 py-4 mx-auto w-full bg-gray-100">
+    <nav aria-label="Breadcrumb " class="w-full p-4">
+      <ol class="flex items-center gap-1 text-sm text-gray-600 mx-auto">
+        <li>
+          <a href="index.html" class="block transition hover:text-gray-700">
+            <span class="sr-only"> Home </span>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
-            </a>
-          </li>
-
-          <!--<li class="rtl:rotate-180">-->
-          <!--  <svg-->
-          <!--    xmlns="http://www.w3.org/2000/svg"-->
-          <!--    class="h-4 w-4"-->
-          <!--    viewBox="0 0 20 20"-->
-          <!--    fill="currentColor"-->
-          <!--  >-->
-          <!--    <path-->
-          <!--      fill-rule="evenodd"-->
-          <!--      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"-->
-          <!--      clip-rule="evenodd"-->
-          <!--    />-->
-          <!--  </svg>-->
-          <!--</li>-->
-
-          <!--<li>-->
-          <!--  <a href="#" class="block transition hover:text-gray-700">-->
-          <!--    IT Services-->
-          <!--  </a>-->
-          <!--</li>-->
-
-          <li class="rtl:rotate-180">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
-          </li>
+          </a>
+        </li>
 
-          <li>
-            <a href="#" class="block transition hover:text-gray-700">
-                Data Services
-            </a>
-          </li>
-        </ol>
-      </nav>
-    </section><br><br><br>
-    <!-- <section>
+        <!--<li class="rtl:rotate-180">-->
+        <!--  <svg-->
+        <!--    xmlns="http://www.w3.org/2000/svg"-->
+        <!--    class="h-4 w-4"-->
+        <!--    viewBox="0 0 20 20"-->
+        <!--    fill="currentColor"-->
+        <!--  >-->
+        <!--    <path-->
+        <!--      fill-rule="evenodd"-->
+        <!--      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"-->
+        <!--      clip-rule="evenodd"-->
+        <!--    />-->
+        <!--  </svg>-->
+        <!--</li>-->
+
+        <!--<li>-->
+        <!--  <a href="#" class="block transition hover:text-gray-700">-->
+        <!--    IT Services-->
+        <!--  </a>-->
+        <!--</li>-->
+
+        <li class="rtl:rotate-180">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </li>
+
+        <li>
+          <a href="#" class="block transition hover:text-gray-700">
+            Data Services
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </section><br><br><br>
+  <!-- <section>
         <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
               <div class="flex flex-col justify-center">
@@ -960,136 +943,170 @@
             </div>
           </div>
     </section> -->
-   
+
   <section>
-     <center> <h2 class="max-w-lg mb-6   uppercase text-3xl font-extrabold  text-center    text-gray-700    ">
+    <center>
+      <h2 class="max-w-lg mb-6   uppercase text-3xl font-extrabold  text-center    text-gray-700    ">
         Our Data Services
-      </h2></center>
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
-            <div class="flex flex-col justify-center">
-              <div class="max-w-xl mb-6">
-                <h4 class="mb-2 font-semibold md: ">
-                    1. Data Strategy & Consulting
-                </h4>
-                <p class="text-base text-gray-700 md: ">
-                    Every successful data initiative starts with a solid strategy. At Voicene, we provide expert data consulting services to help you define your data needs, set clear objectives, and create a roadmap that aligns with your business goals. Our consultants will guide you in establishing a robust data governance framework that ensures security, quality, and compliance.
-                </p>
-              </div>
-              
-              <li><b>Data Strategy Development: </b>Align your data initiatives with business objectives for optimal impact.</li><br>
-              <li><b>Data Governance: </b>Ensure data security, accuracy, and accessibility through clear governance frameworks.</li><br>
-              <li><b>Data Quality Management: </b>Improve data integrity and reduce errors with our data quality solutions.</li><br>
-              
-            </div>
-            <div>
-              <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-100" src="img/strat.jpg" alt="" />
-            </div>
-
-
-            <div class="flex flex-col justify-center">
-              <div class="max-w-xl mb-6">
-                <img class="object-cover w-85 h-85 rounded shadow-lg sm:h-96" src="img/integration.jpg" alt="" />
-              </div>
-              
-              
-            </div>
-            <div>
-              <h4 class="mb-2 font-semibold md: ">
-                2. Data Integration & Migration
-              </h4>
-              <p class="text-base text-gray-700 md: ">
-                Bringing together data from multiple sources and platforms is essential for a unified, 360-degree view of your business. Our data integration and migration services ensure seamless connectivity and synchronization between your systems, enabling smooth transitions with minimal disruption.
-              </p>
-                <li><b>Data Integration: </b>Connect disparate data sources into a single, cohesive system for real-time insights.</li><br>
-                <li><b>Data Migration: </b>Move your data securely and efficiently to new platforms or cloud environments with zero downtime.</li><br>
-                <li><b>ETL Solutions: </b>Extract, transform, and load your data with precision, ensuring consistency and accuracy throughout the process.</li><br>
-            </div>
-
-
-            <div class="flex flex-col justify-center">
-              <div class="max-w-xl mb-6">
-                <h4 class="mb-2 font-semibold md: ">
-                 3. Data Analytics & Business Intelligence
-                </h4>
-                <p class="text-base text-gray-700 md: ">
-                    Turn raw data into actionable insights with our advanced data analytics and business intelligence services. From descriptive and predictive analytics to AI-powered data modeling, we help you uncover patterns, trends, and opportunities that will drive smarter business decisions.
-                </p>
-              </div>
-              
-              <li><b>Predictive Analytics: </b>Anticipate future trends and behavior with data-driven forecasting models.</li><br>
-                <li><b>Business Intelligence (BI) Dashboards:</b> Visualize your data with customized, user-friendly BI dashboards that allow for real-time decision-making.</li><br>
-                <li><b>Big Data Analytics:</b> Analyze massive volumes of data with scalable, cloud-based solutions for deep insights.</li><br>
-            </div>
-            <div>
-              <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/analytics.jpeg" alt="" />
-            </div>
-
-
-            <div class="flex flex-col justify-center">
-              <div class="max-w-xl mb-6">
-                <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/data-engineering.jpg" alt="" />
-              </div>
-              
-              
-            </div>
-            <div>
-              <h4 class="mb-2 font-semibold md: ">
-                4. Data Engineering
-              </h4>
-              <p class="text-base text-gray-700 md: ">
-                Our expert data engineers help you design, build, and maintain scalable data infrastructure that ensures smooth data processing and management. We provide end-to-end data engineering services, from building robust data pipelines to setting up cloud-based data lakes and warehouses.
-              </p>
-              <li><b>Data Pipeline Development:</b> Automate data flow between systems and ensure consistent, high-quality data delivery.</li><br>
-              <li><b>Data Warehouse & Data Lake Solutions:</b> Centralize your data in scalable, secure environments for easy access and analysis.</li><br>
-              <li><b>Cloud Data Services:</b> Leverage the power of cloud platforms like AWS, Google Cloud, and Azure for efficient and scalable data management.</li><br>
-
-            </div>
-
-
-            <div class="flex flex-col justify-center">
-              <div class="max-w-xl mb-6">
-                <h4 class="mb-2 font-semibold md: ">
-                    5. Data Security & Privacy
-                </h4>
-                <p class="text-base text-gray-700 md: ">
-                    In a world where data breaches and cyber threats are growing, protecting your data is our top priority. Voicene’s data security and privacy solutions are designed to safeguard your sensitive information, ensure compliance with global regulations, and prevent unauthorized access.
-                </p>
-              </div>
-              
-              <li><b>Data Encryption & Masking:</b> Protect sensitive information with advanced encryption methods and data masking techniques.</li><br>
-              <li><b>Compliance Solutions:</b> Ensure your data processes meet all relevant privacy regulations, such as GDPR and CCPA.</li><br>
-              <li><b>Data Auditing & Monitoring:</b> Track data usage and access to prevent unauthorized breaches and ensure accountability.</li><br>
-
-            </div>
-            <div>
-              <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/security.jpg" alt="" />
-            </div>
-
-            
-            <div class="flex flex-col justify-center">
-                <div class="max-w-xl mb-6">
-                  <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/AI sol.jpg" alt="" />
-                </div>
-                
-                
-              </div>
-              <div>
-                <h4 class="mb-2 font-semibold md: ">
-                6. AI & Machine Learning Solutions
-                </h4>
-                <p class="text-base text-gray-700 md: ">
-                Unlock the full potential of your data with AI and machine learning. We help you harness the power of advanced algorithms and automation to predict outcomes, optimize processes, and drive innovation. From custom AI models to ready-to-deploy machine learning solutions, we tailor our approach to meet your unique needs.
-                </p>
-                <li><b>Machine Learning Models:</b> Implement predictive and prescriptive models to optimize decision-making.</li><br>
-                <li><b>AI-Powered Automation:</b> Streamline your business operations using AI-driven automation and intelligent systems.</li><br>
-                <li><b>Natural Language Processing (NLP):</b> Transform unstructured data, such as text and speech, into valuable insights using advanced NLP techniques.</li><br>
-  
-              </div>
-  
-
+      </h2>
+    </center>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h4 class="mb-2 font-semibold md: ">
+              1. Data Strategy & Consulting
+            </h4>
+            <p class="text-base text-gray-700 md: ">
+              Every successful data initiative starts with a solid strategy. At Voicene, we provide expert data
+              consulting services to help you define your data needs, set clear objectives, and create a roadmap that
+              aligns with your business goals. Our consultants will guide you in establishing a robust data governance
+              framework that ensures security, quality, and compliance.
+            </p>
           </div>
+
+          <li><b>Data Strategy Development: </b>Align your data initiatives with business objectives for optimal impact.
+          </li><br>
+          <li><b>Data Governance: </b>Ensure data security, accuracy, and accessibility through clear governance
+            frameworks.</li><br>
+          <li><b>Data Quality Management: </b>Improve data integrity and reduce errors with our data quality solutions.
+          </li><br>
+
         </div>
+        <div>
+          <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-100" src="img/strat.jpg" alt="" />
+        </div>
+
+
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <img class="object-cover w-85 h-85 rounded shadow-lg sm:h-96" src="img/integration.jpg" alt="" />
+          </div>
+
+
+        </div>
+        <div>
+          <h4 class="mb-2 font-semibold md: ">
+            2. Data Integration & Migration
+          </h4>
+          <p class="text-base text-gray-700 md: ">
+            Bringing together data from multiple sources and platforms is essential for a unified, 360-degree view of
+            your business. Our data integration and migration services ensure seamless connectivity and synchronization
+            between your systems, enabling smooth transitions with minimal disruption.
+          </p>
+          <li><b>Data Integration: </b>Connect disparate data sources into a single, cohesive system for real-time
+            insights.</li><br>
+          <li><b>Data Migration: </b>Move your data securely and efficiently to new platforms or cloud environments with
+            zero downtime.</li><br>
+          <li><b>ETL Solutions: </b>Extract, transform, and load your data with precision, ensuring consistency and
+            accuracy throughout the process.</li><br>
+        </div>
+
+
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h4 class="mb-2 font-semibold md: ">
+              3. Data Analytics & Business Intelligence
+            </h4>
+            <p class="text-base text-gray-700 md: ">
+              Turn raw data into actionable insights with our advanced data analytics and business intelligence
+              services. From descriptive and predictive analytics to AI-powered data modeling, we help you uncover
+              patterns, trends, and opportunities that will drive smarter business decisions.
+            </p>
+          </div>
+
+          <li><b>Predictive Analytics: </b>Anticipate future trends and behavior with data-driven forecasting models.
+          </li><br>
+          <li><b>Business Intelligence (BI) Dashboards:</b> Visualize your data with customized, user-friendly BI
+            dashboards that allow for real-time decision-making.</li><br>
+          <li><b>Big Data Analytics:</b> Analyze massive volumes of data with scalable, cloud-based solutions for deep
+            insights.</li><br>
+        </div>
+        <div>
+          <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/analytics.jpeg" alt="" />
+        </div>
+
+
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/data-engineering.jpg" alt="" />
+          </div>
+
+
+        </div>
+        <div>
+          <h4 class="mb-2 font-semibold md: ">
+            4. Data Engineering
+          </h4>
+          <p class="text-base text-gray-700 md: ">
+            Our expert data engineers help you design, build, and maintain scalable data infrastructure that ensures
+            smooth data processing and management. We provide end-to-end data engineering services, from building robust
+            data pipelines to setting up cloud-based data lakes and warehouses.
+          </p>
+          <li><b>Data Pipeline Development:</b> Automate data flow between systems and ensure consistent, high-quality
+            data delivery.</li><br>
+          <li><b>Data Warehouse & Data Lake Solutions:</b> Centralize your data in scalable, secure environments for
+            easy access and analysis.</li><br>
+          <li><b>Cloud Data Services:</b> Leverage the power of cloud platforms like AWS, Google Cloud, and Azure for
+            efficient and scalable data management.</li><br>
+
+        </div>
+
+
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h4 class="mb-2 font-semibold md: ">
+              5. Data Security & Privacy
+            </h4>
+            <p class="text-base text-gray-700 md: ">
+              In a world where data breaches and cyber threats are growing, protecting your data is our top priority.
+              Voicene’s data security and privacy solutions are designed to safeguard your sensitive information, ensure
+              compliance with global regulations, and prevent unauthorized access.
+            </p>
+          </div>
+
+          <li><b>Data Encryption & Masking:</b> Protect sensitive information with advanced encryption methods and data
+            masking techniques.</li><br>
+          <li><b>Compliance Solutions:</b> Ensure your data processes meet all relevant privacy regulations, such as
+            GDPR and CCPA.</li><br>
+          <li><b>Data Auditing & Monitoring:</b> Track data usage and access to prevent unauthorized breaches and ensure
+            accountability.</li><br>
+
+        </div>
+        <div>
+          <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/security.jpg" alt="" />
+        </div>
+
+
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <img class="object-cover w-89 h-90 rounded shadow-lg sm:h-96" src="img/AI sol.jpg" alt="" />
+          </div>
+
+
+        </div>
+        <div>
+          <h4 class="mb-2 font-semibold md: ">
+            6. AI & Machine Learning Solutions
+          </h4>
+          <p class="text-base text-gray-700 md: ">
+            Unlock the full potential of your data with AI and machine learning. We help you harness the power of
+            advanced algorithms and automation to predict outcomes, optimize processes, and drive innovation. From
+            custom AI models to ready-to-deploy machine learning solutions, we tailor our approach to meet your unique
+            needs.
+          </p>
+          <li><b>Machine Learning Models:</b> Implement predictive and prescriptive models to optimize decision-making.
+          </li><br>
+          <li><b>AI-Powered Automation:</b> Streamline your business operations using AI-driven automation and
+            intelligent systems.</li><br>
+          <li><b>Natural Language Processing (NLP):</b> Transform unstructured data, such as text and speech, into
+            valuable insights using advanced NLP techniques.</li><br>
+
+        </div>
+
+
+      </div>
+    </div>
   </section>
 
 
@@ -1107,7 +1124,7 @@
 
 
 
-      <!-- <section>
+  <!-- <section>
         <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
             <div class="flex flex-col justify-center">
@@ -1170,11 +1187,11 @@
           </div>
         </div> -->
 
-      <!-- Icon Blocks -->
-      
-      <!-- End Icon Blocks -->
-    </section>
-    <!-- <section class="bg-gray-100">
+  <!-- Icon Blocks -->
+
+  <!-- End Icon Blocks -->
+  </section>
+  <!-- <section class="bg-gray-100">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 lg:mb-16">
                 <h2 class="mb-4 uppercase text-3xl font-extrabold   text-main">Types of Staff Augmentation Services
@@ -1238,46 +1255,46 @@
             </div>
           </div>
       </section> -->
-      <!--<section class="bg-gray-100">-->
-        
-      <!--  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">-->
-      <!--      <div class=" mb-8 lg:mb-16">-->
-      <!--          <h2 class="mb-4 text-3xl text-center  uppercase font-extrabold text-main ">Voicene's Staff Augmentation Services-->
-      <!--          </h2>-->
-      <!--      </div>-->
-      <!--      <div class="flex flex-col bg-white border rounded shadow-sm md:justify-center lg:flex-row">-->
-      <!--        <div class="flex flex-col justify-between p-5 border-b sm:p-10 lg:border-b-0 lg:border-r lg:w-1/2">-->
-      <!--          <div>-->
-                  
-      <!--            <h5 class="max-w-md mb-6 text-3xl font-extrabold leading-none  ">-->
-      <!--              Overview of Services-->
+  <!--<section class="bg-gray-100">-->
 
-      <!--            </h5>-->
-      <!--            <p class="mb-6 text-base text-gray-700  sm:mb-8">-->
-      <!--              At Voicene Technologies, we offer comprehensive staff augmentation services to meet the diverse needs of our clients. Our services span various industries, including IT, finance, healthcare, and more. We provide professionals with the skills and expertise required to support your projects and drive success.-->
+  <!--  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">-->
+  <!--      <div class=" mb-8 lg:mb-16">-->
+  <!--          <h2 class="mb-4 text-3xl text-center  uppercase font-extrabold text-main ">Voicene's Staff Augmentation Services-->
+  <!--          </h2>-->
+  <!--      </div>-->
+  <!--      <div class="flex flex-col bg-white border rounded shadow-sm md:justify-center lg:flex-row">-->
+  <!--        <div class="flex flex-col justify-between p-5 border-b sm:p-10 lg:border-b-0 lg:border-r lg:w-1/2">-->
+  <!--          <div>-->
 
-      <!--            </p>-->
-      <!--          </div>-->
-                
-      <!--        </div>-->
-      <!--        <div class="flex flex-col justify-between p-5 sm:p-10 lg:w-1/2">-->
-      <!--          <div>-->
-                  
-      <!--            <h5 class="max-w-md mb-6 text-3xl font-extrabold leading-none  ">-->
-      <!--              Client Success Stories-->
+  <!--            <h5 class="max-w-md mb-6 text-3xl font-extrabold leading-none  ">-->
+  <!--              Overview of Services-->
 
-      <!--            </h5>-->
-      <!--            <p class="mb-6 text-base text-gray-700  sm:mb-8">-->
-      <!--              Our clients have experienced significant benefits from our staff augmentation services. For instance, a leading e-commerce company partnered with us to augment their development team, resulting in faster project completion and enhanced user experience. These success stories highlight our commitment to delivering exceptional results for our clients.-->
+  <!--            </h5>-->
+  <!--            <p class="mb-6 text-base text-gray-700  sm:mb-8">-->
+  <!--              At Voicene Technologies, we offer comprehensive staff augmentation services to meet the diverse needs of our clients. Our services span various industries, including IT, finance, healthcare, and more. We provide professionals with the skills and expertise required to support your projects and drive success.-->
 
-      <!--            </p>-->
-      <!--          </div>-->
-                
-      <!--        </div>-->
-      <!--      </div>-->
-      <!--    </div>-->
-      <!--</section>-->
-      <!-- <section>
+  <!--            </p>-->
+  <!--          </div>-->
+
+  <!--        </div>-->
+  <!--        <div class="flex flex-col justify-between p-5 sm:p-10 lg:w-1/2">-->
+  <!--          <div>-->
+
+  <!--            <h5 class="max-w-md mb-6 text-3xl font-extrabold leading-none  ">-->
+  <!--              Client Success Stories-->
+
+  <!--            </h5>-->
+  <!--            <p class="mb-6 text-base text-gray-700  sm:mb-8">-->
+  <!--              Our clients have experienced significant benefits from our staff augmentation services. For instance, a leading e-commerce company partnered with us to augment their development team, resulting in faster project completion and enhanced user experience. These success stories highlight our commitment to delivering exceptional results for our clients.-->
+
+  <!--            </p>-->
+  <!--          </div>-->
+
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--</section>-->
+  <!-- <section>
         <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
               <div class="relative lg:w-1/2">
@@ -1307,9 +1324,9 @@
             </div>
           </div>
       </section> -->
-      <section class="bg-gray-100">
-        <!-- ////////////////////////////////////////// -->
-        <!-- <h2 class="  mb-6  uppercase text-3xl font-extrabold  text-main text-center md:mx-auto">
+  <section class="bg-gray-100">
+    <!-- ////////////////////////////////////////// -->
+    <!-- <h2 class="  mb-6  uppercase text-3xl font-extrabold  text-main text-center md:mx-auto">
                  
           <u><i>Our SEO & Digital Marketing Services</i></u>
         </h2>
@@ -1424,8 +1441,8 @@
 
 
 
-        <!-- ///////////////////////////////////////// -->
-        <!-- <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+    <!-- ///////////////////////////////////////// -->
+    <!-- <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
             <div class="p-8 rounded shadow-xl sm:p-16 bg-white">
               <div class="flex flex-col lg:flex-row">
                 <div class="mb-6 lg:mb-0  lg:pr-5">
@@ -1445,32 +1462,40 @@
           </div> -->
 
 
-          <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
-              <div class="flex flex-col justify-center">
-                <div class="max-w-xl mb-6">
-                  <h2 class="max-w-lg mb-6   uppercase text-3xl font-extrabold       text-gray-700    ">
-                    Why Choose Voicene for<br class="hidden md:block" />
-                     Data Services?
-                  </h2>
-                  <p class="text-base text-gray-700 md: ">
-                    At Voicene Technologies, we don’t just provide data services; we deliver business-driven data solutions that empower you to make informed decisions, improve operations, and gain a competitive edge. Here’s why we stand out:
-                  </p>
-                </div>
-                
-                    <li><b>Customized Solutions:</b> Every business is different, and we tailor our services to meet your specific data needs.</li>
-                    <li><b>Expert Team:</b> Our team of data experts brings a wealth of experience across industries and platforms.</li>
-                    <li><b>End-to-End Services:</b> From strategy to execution, we cover all aspects of data management, ensuring seamless integration and ongoing support.</li>
-                    <li><b>Proven Results:</b> We’ve helped businesses of all sizes unlock the value of their data and achieve measurable success.</li> 
-                    <li><b>Cutting-Edge Technology:</b> We stay at the forefront of innovation, leveraging the latest in AI, machine learning, and data processing technologies.</li>
-              </div>
-              <div>
-                <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src="img/hologram-projector-screen-with-cloud-system-technology.jpg" alt="" />
-              </div>
-            </div>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h2 class="max-w-lg mb-6   uppercase text-3xl font-extrabold       text-gray-700    ">
+              Why Choose Voicene for<br class="hidden md:block" />
+              Data Services?
+            </h2>
+            <p class="text-base text-gray-700 md: ">
+              At Voicene Technologies, we don’t just provide data services; we deliver business-driven data solutions
+              that empower you to make informed decisions, improve operations, and gain a competitive edge. Here’s why
+              we stand out:
+            </p>
           </div>
-      </section>
-      <!-- <section>
+
+          <li><b>Customized Solutions:</b> Every business is different, and we tailor our services to meet your specific
+            data needs.</li>
+          <li><b>Expert Team:</b> Our team of data experts brings a wealth of experience across industries and
+            platforms.</li>
+          <li><b>End-to-End Services:</b> From strategy to execution, we cover all aspects of data management, ensuring
+            seamless integration and ongoing support.</li>
+          <li><b>Proven Results:</b> We’ve helped businesses of all sizes unlock the value of their data and achieve
+            measurable success.</li>
+          <li><b>Cutting-Edge Technology:</b> We stay at the forefront of innovation, leveraging the latest in AI,
+            machine learning, and data processing technologies.</li>
+        </div>
+        <div>
+          <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+            src="img/hologram-projector-screen-with-cloud-system-technology.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section>
         <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="  sm:text-center sm:mx-auto">
               <p>Conclusion</p>
@@ -1489,11 +1514,11 @@
           </div>
       </section>
      -->
-    
-    
-   
-    
-    <!-- <section>
+
+
+
+
+  <!-- <section>
       
       <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
        
@@ -1819,31 +1844,28 @@
       </div>
      
     </section> -->
-    <section class="py-6 bg-main text-white">
-      <div
-        class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48"
-      >
-        <h1 class=" uppercase text-3xl font-extrabold   text-center">
-            Unlock the Full Potential of Your Data
+  <section class="py-6 bg-main text-white">
+    <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
+      <h1 class=" uppercase text-3xl font-extrabold   text-center">
+        Unlock the Full Potential of Your Data
 
-        </h1>
-        <p class="text-xl font-medium text-center">
-            Your data holds the key to growth and innovation, and Voicene Technologies is here to help you unlock it. Whether you’re looking to develop a comprehensive data strategy, migrate to the cloud, or leverage advanced analytics for deeper insights, our team is ready to assist.
+      </h1>
+      <p class="text-xl font-medium text-center">
+        Your data holds the key to growth and innovation, and Voicene Technologies is here to help you unlock it.
+        Whether you’re looking to develop a comprehensive data strategy, migrate to the cloud, or leverage advanced
+        analytics for deeper insights, our team is ready to assist.
         <br><br><br>
         <b>Contact us</b> today to learn more about how our <b>Data Services</b> can transform your business.
-        </p>
-        <div
-          class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8"
-        >
-          <a
-            href="contactus.html"
-            class="px-8 py-3   font-normal border rounded dark:bg-gray-800 dark:text-gray-50 dark:border-gray-700"
-            >Contact Us for a Free Consultation
-          </a>
-        </div>
+      </p>
+      <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8">
+        <a href="contactus.html"
+          class="px-8 py-3   font-normal border rounded dark:bg-gray-800 dark:text-gray-50 dark:border-gray-700">Contact
+          Us for a Free Consultation
+        </a>
       </div>
-    </section>
-    <!-- ========== FOOTER ========== -->
+    </div>
+  </section>
+  <!-- ========== FOOTER ========== -->
   <footer class="mt-auto w-full max-w-[85rem] pt-10 mx-auto bg-white">
     <!-- Grid -->
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10 px-4 sm:px-6 lg:px-8">
@@ -1889,16 +1911,19 @@
             <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800" href="./Itservices.html">IT Services</a>
           </p>
           <p>
-            <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800" href="./itservices/webdevelopmentservice.html">
+            <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800"
+              href="./itservices/webdevelopmentservice.html">
               Web development
             </a>
           </p>
           <p>
-            <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800" href="./itservices/mobileappdevelopmentservice.html">App Development
+            <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800"
+              href="./itservices/mobileappdevelopmentservice.html">App Development
             </a>
           </p>
           <p>
-            <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800" href="./EnterpriseResourcePlanning.html">ERP</a>
+            <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800"
+              href="./EnterpriseResourcePlanning.html">ERP</a>
           </p>
           <p>
             <a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800" href="./dataserv.html">Data Services</a>
@@ -2188,5 +2213,6 @@
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
   <div class="elfsight-app-5e3ab10a-bc43-435c-ad95-d81b88f1561e" data-elfsight-app-lazy></div>
   <!-- ========== END FOOTER ========== -->
-  </body>
+</body>
+
 </html>
